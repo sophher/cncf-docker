@@ -3,31 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hello": {
+    "cncf-docker": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/hello",
-      "sourceRoot": "projects/hello/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hello",
-            "index": "projects/hello/src/index.html",
-            "browser": "projects/hello/src/main.ts",
+            "outputPath": "dist/cncf-docker",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/hello/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/hello/public"
+                "input": "public"
               }
             ],
             "styles": [
-              "projects/hello/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hello:build:production"
+              "buildTarget": "cncf-docker:build:production"
             },
             "development": {
-              "buildTarget": "hello:build:development"
+              "buildTarget": "cncf-docker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,23 +77,20 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/hello/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/hello/public"
+                "input": "public"
               }
             ],
             "styles": [
-              "projects/hello/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
