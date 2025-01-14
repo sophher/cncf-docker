@@ -34,11 +34,12 @@ docker stop demo3
 docker rm demo3
 ```
 
-## Demo - Buildx
+## Demo 4 - Buildx
 
 ```bash
 docker buildx bake -f demo4.bake.hcl
 docker run --name demo4 -d -p 8080:80 demo4
+curl http://localhost:8080
 docker stop demo4
 docker rm demo4
 ```
