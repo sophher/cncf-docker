@@ -1,31 +1,20 @@
 {
     "name": "cncf-demo",
-  
     "build": {
         "dockerfile": "../demo3.Dockerfile",
         "target": "base",
         "context": ".."
     },
-  
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-  
     "customizations": {
       "vscode": {
         "extensions": ["angular.ng-template"]
       }
     },
-  
     "forwardPorts": [4200],
-  
-    // "portsAttributes": {
-    //   "3000": {
-    //     "label": "Hello Remote World",
-    //     "onAutoForward": "notify"
-    //   }
-    // },
-  
     "postCreateCommand": "pnpm install"
   
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+
     // "remoteUser": "root"
   }
