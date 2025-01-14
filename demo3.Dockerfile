@@ -2,6 +2,7 @@ FROM nginx:1.27.3 AS nginx
 FROM cypress/browsers:22.13.0 AS browsers
 
 FROM browsers AS base
+EXPOSE 4200
 RUN npm install -g pnpm@latest-10
 
 FROM base AS tester
