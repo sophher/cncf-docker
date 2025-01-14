@@ -11,5 +11,5 @@ target "test" {
 target "build" {
   target = "build"
   dockerfile = "demo3.Dockerfile"
-  tags = ["demo4"]
+  tags = ["demo5"]
 }

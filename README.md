@@ -43,3 +43,19 @@ curl http://localhost:8080
 docker stop demo4
 docker rm demo4
 ```
+
+## Demo 5 - Docker Build Cloud
+
+Setup:
+
+- Download buildx binary from https://github.com/docker/buildx/releases/ as per your OS architecture
+- Rename the binary to `docker-buildx`
+- Place the binary in the below path :`~/.docker/cli-plugins`
+- Give the binary execute rights: `chmod a+x ~/.docker/cli-plugins/docker-buildx`
+
+
+```bash
+docker login
+docker buildx create --driver cloud sophher/cncf-docker
+docker buildx bake --builder cloud-sophher-cncf-docker -f demo5.bake.hcl
+```
