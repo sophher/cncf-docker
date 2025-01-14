@@ -25,6 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/bake-action@v6
         with:
-          files: 
-            - demo5.bake.hcl
+          files: |
+            ./demo5.bake.hcl
           push: false
