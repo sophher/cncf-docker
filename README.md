@@ -14,6 +14,7 @@ docker rm demo1
 ```
 
 ## Demo 2 - BuildKit
+
 ```bash
 docker build --file demo2.Dockerfile --target test --output type=local,dest=coverage .
 docker build --file demo2.Dockerfile --target build --tag demo2 .
@@ -58,4 +59,8 @@ Setup:
 docker login
 docker buildx create --driver cloud sophher/cncf-docker
 docker buildx bake --builder cloud-sophher-cncf-docker -f demo5.bake.hcl
+docker run --name demo5 -d -p 8080:80 demo5
+curl http://localhost:8080
+docker stop demo5
+docker rm demo5
 ```
