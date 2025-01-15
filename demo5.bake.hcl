@@ -19,5 +19,5 @@ target "test" {
 target "build" {
   target = "build"
   dockerfile = "demo3.Dockerfile"
-  tags = ["demo5"]
+  tags = ["sophher/cncf-docker:demo5"]
 }

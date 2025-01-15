@@ -27,4 +27,4 @@ jobs:
         with:
           files: |
             ./demo5.bake.hcl
-          push: false
+          push: true
