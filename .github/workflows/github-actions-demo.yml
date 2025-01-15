@@ -26,5 +26,5 @@ jobs:
         uses: docker/bake-action@v6
         with:
           files: |
-            ./demo5.bake.hcl
+            ./demo6.bake.hcl
           push: true
